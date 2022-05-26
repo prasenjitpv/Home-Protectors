@@ -20,7 +20,8 @@ class HomeController extends Controller
     {
         if(\Session::has('firstname')) {
             \Session::forget('firstname');
-            return view('thankyou', []);
+            $phone = \Session::get('phone');
+            return view('thankyou', ["phone"=>$phone]);
         } else {
             return redirect('quote');
         }
@@ -34,6 +35,7 @@ class HomeController extends Controller
         $zipcode   = $request->zipcode;
         $phone     = $request->phone;
         \Session::put('firstname', $firstname);
+        \Session::put('phone', $phone);
         return response()->json(array('sms'=>1));
     }
 }

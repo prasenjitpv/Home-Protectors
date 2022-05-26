@@ -10,7 +10,9 @@ Thankyou | {{ config('app.name') }}
         <div class="col-md-12 text-center">
           <h2>Thank You !</h2>
           <p>Call (800) 867-5309</p>
-          
+          <div class="g3cm_holder" data-module="1752" data-showoninit="true" data-conversionnid="" data-distination="" data-distinationtext="" data-follwoup="" style="display:none;">
+            Thankyou for you inquiry. A representative will be in contact with you shortly. 
+          </div>
         </div>
       </div>
     </div>
@@ -31,5 +33,11 @@ Thankyou | {{ config('app.name') }}
 @endsection
 
 @section('scripts') 
-
+<script type="text/javascript">
+window.g3cm = window.g3cm || function () { (g3cm.q = g3cm.q || []).push(arguments) };
+g3cm('loadjquery', 'true');
+g3cm('phonenumber', '{{ $phone }}');
+g3cm('send', 'init');
+</script>
+<script src="https://api.connectstreams.com/js/connectme-v3.min.js" async="async"></script>
 @stop
