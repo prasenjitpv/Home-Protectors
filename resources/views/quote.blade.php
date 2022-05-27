@@ -33,6 +33,8 @@ Quote | {{ config('app.name') }}
                         <button type="submit" class="btn btn-primary" id="btnSubmit">Get a free quote</button>
                     </div>
                     <div id="msgdiv" style="margin-top:10px;display:none;"></div>
+
+                    <input type="hidden" id="leadid_token" value="">
                 </form>
             </div>
         </div>

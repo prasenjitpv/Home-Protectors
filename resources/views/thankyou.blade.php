@@ -13,6 +13,7 @@ Thankyou | {{ config('app.name') }}
           <div class="g3cm_holder" data-module="1752" data-showoninit="true" data-conversionnid="" data-distination="" data-distinationtext="" data-follwoup="" style="display:none;">
             Thankyou for you inquiry. A representative will be in contact with you shortly. 
           </div>
+          <input type="hidden" id="everflowPix" value="">
         </div>
       </div>
     </div>
